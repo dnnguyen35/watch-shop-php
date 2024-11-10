@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 5rem;
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.checkout-button {
+    display: block;
+    margin-top: 16px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container {
+    margin: auto;
+    max-width: 800px;
+}
+
+.remove-buttoncart {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 50px;
+}
+
+.cartth {
+    background-color: greenyellow;
+}
+
+.nutxoacart {
+    display: flex;
+    justify-content: center;
+}
+
+.cartquantity {
+    width: 50px;
+}
+
+.quantitycart {
+    display: flex;
+    justify-content: center;
+}
+
+.product-image {
+    width: 50px;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+#nuttrongcart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*               css cho form thanh toan           */
+/* #formthanhtoan {
+    display: flex;
+    flex-direction: column;
+}
+
+#formthanhtoan label {
+    margin-bottom: 5px;
+}
+
+#formthanhtoan input {
+    padding: 5px;
+    margin-bottom: 10px;
+} */
+
+#formthanhtoan{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.left{
+    display: flex;
+}
+
+.right{
+    margin-bottom: 0.75rem;
+}

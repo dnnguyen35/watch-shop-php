@@ -1,0 +1,56 @@
+.range-slider-container {
+            position: relative;
+            width: 300px;
+            margin: 20px auto;
+            height: 50px;
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 8px;
+            background: #ddd;
+            outline: none;
+            opacity: 0.7;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            pointer-events: none; /* Ngăn không cho tương tác với cả hai thanh */
+        }
+
+        input[type="range"]#minRange {
+            z-index: 2; /* Đặt thanh trượt tối thiểu lên trên */
+            pointer-events: all; /* Cho phép tương tác với thanh này */
+        }
+
+        input[type="range"]#maxRange {
+            z-index: 1; /* Thanh trượt tối đa nằm dưới thanh tối thiểu */
+            pointer-events: all; /* Cho phép tương tác với thanh này */
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #4CAF50;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 3;
+            position: relative; /* Giúp giữ thumb trên thanh */
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: #4CAF50;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .price-labels {
+            margin-top: 40px;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }

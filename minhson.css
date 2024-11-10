@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap');
+:root{
+    --lg-font: 'Kaisei Tokumin', serif;
+    --sm-font: 'Poppins', sans-serif;
+    --pink:#e95454;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.search_box{
+    opacity: 0.5;
+    background-color: #dedede;
+    padding: 2px 11px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    outline: none;
+}
+
+#search-btn i{
+    margin-bottom: 2px;
+}
+
+.bg-primary{
+    background-color: var(--pink)!important;
+}
+.navbar{
+    box-shadow: 0 3px 9px 3px rgba(0,0, 0, 0.1);
+}
+.navbar-brand img{  
+    width: 80px;
+}
+.navbar-brand span{
+    letter-spacing: 2px;
+    font-family: var(--lg-font);
+}
+.nav-link:hover{
+    color: var(--pink)!important;
+}
+.nav-item{
+    border-bottom: 0.5px solid rgba(0,0, 0, 0.05);
+}
+#demo{
+    width: 100%;
+    margin-top: 75px;
+}
+#search-box #search-text{
+    background: none;
+    font-size: 15px;
+    transition:all 0.25s ease-in-out ;
+    background-color: #dedede;
+    opacity: 0.5;
+    border: 1px solid #ccc;
+    padding: 2px 11px;
+    outline: none;
+}
+#search-btn{
+    margin-bottom: 1px;
+}
+#search-box #search-btn{
+    cursor: pointer;
+}
+#demo a{
+    color: black;
+    background-color: #fff;
+    border-radius: 30px;
+}
+#demo a:hover{
+    color: #fff!important;
+    background-color: var(--pink);
+}
+.dropdown-item:active{
+    background-color:white;
+}
+.title h2::before{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 40px;
+    background: var(--pink);
+    left    : -20px;
+}
+#btnc{  
+    border-color:black ;
+}
+.active-filter-btn{
+    background-color: var(--pink)!important ;
+}
+#btnc:hover{
+    background-color: var(--pink)!important;
+    color: #fff !important;
+}
+.collection-img img{
+    transition: all 0.3s ease;
+}
+.collection-img:hover img{
+    transform: scale(1.2);
+}
+.collection-img span{
+   top:   20px;
+   right:  20px;
+   width:  46px;
+   height: 46px;
+   border-radius: 50%;
+}
+.filter-button-group .btn:hover{
+    color: #fff!important;
+}
+.limited-img img{
+    transition: all 0.3s ease;
+}
+.limited-img:hover img{
+    transform: scale(1.2);
+}
+#discount{
+    background: url(./img/discount.jpg) center/cover no-repeat;
+    
+}
+#discount .row{
+    min-height: 60vh;
+}
+
+.discount-content span{
+    font-size: 30px;
+}
+#discount a{
+    color: black;
+    background-color: #fff;
+    border-radius: 30px;
+}
+#discount a:hover{
+    color: #fff!important;
+    background-color: var(--pink);
+}
+#about{
+    background-color: rgba(0, 0,0, 0.05);
+}
+#contact input{
+    border-radius: 30px;
+}
+#contact .btn{
+    background-color: var(--pink);
+    margin-left: 5px;
+    border-radius: 30px;
+}
+.info{
+    text-decoration: none;
+    color: black;
+}
+

@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap');
+:root{
+    --lg-font: 'Kaisei Tokumin', serif;
+    --sm-font: 'Poppins', sans-serif;
+    --pink:#e5345b;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*CHI TIẾT SẢN PHẨM*/
+
+#container_chitietsp{
+    height: 1000px;
+    margin: 5rem 7rem ;
+    /* margin: 5rem 0 auto; */
+    /* margin-top: 5rem;
+    margin-left: 7.5rem; */
+    margin-bottom: 2rem;
+}
+
+.anhchitiet_sp img{
+    width: 30.313rem;
+    height: 30.313rem;
+
+}
+
+.container_ctsp{
+    display: flex;
+}
+
+.box_uudai{
+    border: 2px solid #f2f2f2;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: 3px 3px 3px #ccc;
+}
+
+.uudai_content{
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 5px 0 5px 0;
+}
+
+.box_uudai p{
+    padding-left: 20px;
+}
+
+.btn_buy{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.btn_buy p{
+    padding: 0.313rem 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.them_sp{
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+    background-color: rgb(237, 29, 43);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    width: 50%;
+    height: 20%;
+}
+
+.add_sp{
+    margin: 0 -0.313rem;
+}
+
+.mua_ngay{
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+    padding: 0 10px;
+    background-color: rgb(237, 29, 43);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    width: 50%;
+    height: 20%;
+}
+
+.them_sp:hover{
+    opacity: 0.9;
+}
+
+.mua_ngay:hover{
+    opacity: 0.9;
+}
+
+.call_now{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 -12px 0;
+}
+
+.call_now_or{
+    justify-content: center;
+}
+
+.call_now_or{
+    display: flex;
+}
+
+.call_now_or img{
+    width: 40px;
+    padding: 0 5px;
+}
+
+.call_now span{
+    font-size: 20px;
+}
+
+.container_ttchitiet{
+    border: 2px solid #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #ccc;
+    width: 65rem;
+}
+
+.header_ttchitiet h5{
+    margin-bottom: 0;
+    padding: 12px 25px;
+    font-weight: 600;
+}
+
+.container_ttchitiet hr{
+    margin: 0 15px;
+}
+
+.box_ttchitiet{
+    padding: 0 ;
+}
+
+.box_ttchitiet p{
+    padding: 15px 15px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.row_tt{
+    background-color: #f2f2f2;
+}

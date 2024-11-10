@@ -1,0 +1,648 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap');
+:root{
+    --lg-font: 'Kaisei Tokumin', serif;
+    --sm-font: 'Poppins', sans-serif;
+    --pink:#e5345b;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h6{
+    margin-bottom: 0;
+    padding: 5px 0;
+    margin-left: 6px;
+}
+
+.clear{
+    clear: both;
+}
+
+.bg-primary{
+    background-color: var(--pink)!important;
+}
+.navbar{
+    box-shadow: 0 3px 9px 3px rgba(0,0, 0, 0.1);
+}
+.navbar-brand img{
+    width: 55px;
+}
+.navbar-brand span{
+    letter-spacing: 2px;
+    font-family: var(--lg-font);
+}
+.nav-link:hover{
+    color: var(--pink)!important;
+}
+.nav-item{
+    border-bottom: 0.5px solid rgba(0,0, 0, 0.05);
+}
+#demo{
+    width: 100%;
+    margin-top: 105px;
+}
+
+#search-box #search-text{
+    background: none;
+    font-size: 15px;
+    transition:all 0.25s ease-in-out ;
+    background-color: #dedede;
+    opacity: 0.5;
+    border: 1px solid #ccc;
+    padding: 2px 11px;
+    outline: none;
+}
+#search-btn{
+    margin-bottom: 1px;
+}
+#demo a{
+    color: black;
+    background-color: #fff;
+    border-radius: 30px;
+}
+#demo a:hover{
+    color: #fff!important;
+    background-color: var(--pink);
+}
+.title h2::before{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 40px;
+    background: var(--pink);
+    left    : -20px;
+}
+#btnc{
+    
+    border-color:black ;
+}
+.active-filter-btn{
+    background-color: var(--pink)!important ;
+}
+#btnc:hover{
+    background-color: var(--pink)!important;
+    color: #fff !important;
+}
+.collection-img img{
+    transition: all 0.3s ease;
+}
+.collection-img:hover img{
+    transform: scale(1.2);
+}
+.collection-img span{
+   top:   20px;
+   right:  20px;
+   width:  46px;
+   height: 46px;
+   border-radius: 50%;
+}
+.filter-button-group .btn:hover{
+    color: #fff!important;
+}
+.limited-img img{
+    transition: all 0.3s ease;
+}
+.limited-img:hover img{
+    transform: scale(1.2);
+}
+#discount{
+    background: url(/images/discount.jpg) center/cover no-repeat;
+}
+#discount .row{
+    min-height: 60vh;
+}
+.discount-content span{
+    font-size: 30px;
+}
+#discount a{
+    color: black;
+    background-color: #fff;
+    border-radius: 30px;
+}
+#discount a:hover{
+    color: #fff!important;
+    background-color: var(--pink);
+}
+#about{
+    background-color: rgba(0, 0,0, 0.05);
+}
+#contact input{
+    border-radius: 30px;
+}
+#contact .btn{
+    background-color: var(--pink);
+    margin-left: 5px;
+    border-radius: 30px;
+}
+
+.form-login a{
+    text-decoration: none;
+    color:blue;
+}
+.form-login button{
+    height: 35px;
+    width: 100%;
+    margin-bottom: 30px ;
+}
+.form-text{
+    margin-bottom: 40px;
+    position: relative;
+}
+.form-text input{
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+}
+.form-text label{
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+}
+.btnsg{
+    margin-top: 10px;
+}
+
+/* GIỎ HÀNG */
+
+.giohang{
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 0 40px;
+}
+
+.header__giohang{
+    padding: 10px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 2px;
+    background-color: #fff;
+    font-weight: 500;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #ccc;
+}
+
+.header__dg{
+    padding-right: 20px;
+}
+
+.header__sl{
+    padding-right: 12px;
+}
+
+.soluong_sp{
+    display: flex;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 4px;
+}
+
+.soluong_sp:hover{
+    cursor: pointer;
+}
+
+.sl{
+    padding: 0 7px;
+}
+
+.sl:hover{
+    cursor: auto;
+}
+
+.them_trusl_sp{
+    padding: 0 2px;
+    padding-bottom: 2px;
+}
+
+.themsl_sp{
+    border-left: 1px solid rgb(200, 200, 200);
+    border-right: none;
+}
+
+.trusl_sp{
+    border-left: none;
+    border-right: 1px solid rgb(200, 200, 200);
+}
+
+
+.space__letter__06{
+    flex: 0.45;
+}
+
+.space__letter__03{
+    flex: -0.3;
+}
+
+.header__giohang p{
+    margin-bottom: 0;
+}
+
+.sanpham{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 35px 20px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #ccc;
+}
+
+.sanpham p{
+    margin-bottom: 0;
+}
+
+.hinh_sp img{
+    width: 80px;
+    height: auto;
+}
+
+.space{
+    width: 100%;
+    height: 15px;
+}
+
+.space2{
+    width: 100%;
+    height: 50px;
+}
+
+.xoa_sp:hover{
+    color:red;
+    cursor: pointer;
+}
+
+.description{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 40px 10px 40px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.description p{
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 0;
+}
+
+.buy-btn{
+    height: 55px;
+    padding: 15px 10px;
+    background-color: rgb(255, 66, 78);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.buy-btn:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.thongtin{
+    height: 130px;
+}
+
+.box__header__thongtin{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    margin-bottom: 0;
+    background-color: #fff;
+}
+
+.box_inf_customer{
+    padding: 1px 20px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    background-color: #fff;
+    margin-bottom: -10px;
+}
+
+.inf_customer_phone{
+    padding: 0 0 0 20px;
+}
+
+.box_inf_address{
+    padding: 1px 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: -30px;
+    background-color: #fff;
+
+}
+
+.tam_tinh,
+.giam_gia,
+.tong_tien{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    background-color: #fff;
+
+}
+
+.tong_tien h3{
+    color: rgb(254, 56, 52);
+}
+
+/*Hàng đã mua*/
+
+#container_spdamua{
+    margin: 0 100px;
+    height: 1000px;
+    padding-top:100px;
+    display: flex;
+}
+
+.tatca{
+    color: #ff3945;
+}
+
+.anh_sp_da_mua{
+    padding-left: 10px;
+}
+
+.container_hoso{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_header{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid rgb(0 0 0 / 15%);
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #ccc;
+}
+
+.inf_user_hdm{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.avatar:hover{
+    cursor: pointer;
+}
+
+.ten_kh p{
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 0;
+    padding-left: 8px;
+    padding-bottom: 4px;
+}
+
+.container_sp{
+    width: 100%;
+    padding: 0 5px 0 30px;
+}
+
+.container_sp p{
+    padding: 5px 7px;
+    font-size: 16px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.container_sp p:hover{
+    color: #ff3945;
+}
+
+.search-spdm{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: #ff3945;
+    padding: 8px 8px 8px 0;
+    margin-bottom: 10px;
+}
+
+.search-spdm-btn{
+    padding: 0 10px 0 13px;
+    width: 100%;
+}
+
+.search-box-control{
+    display: flex;
+    width: 53.75rem;
+    border: none;
+    outline: none;
+}
+
+.width_img{
+    width: 100px;
+    height: auto;
+}
+
+#sp_da_mua{
+    border: 1px solid rgb(0 0 0 / 15%);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #ccc;
+}
+
+.thongtin_sp_da_mua{
+    display: flex;
+    margin-top: 10px;
+}
+
+.ten_sp_da_mua{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    flex: 3;
+    margin-top: 10px;
+}
+
+.ngay_mua_sp{
+    margin-top: 10px;
+    padding-right: 10px;
+}
+
+.sotien_sp_damua{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sotien_damua p{
+    font-size: 24px;
+    color: #ff3945;
+}
+
+.tst{
+    padding-top: 10px;
+}
+
+.danhgia_sp{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+.danhgia_sp p{
+    font-size: 20px;
+}
+
+.danhgia{
+    border-radius: 5px;
+    background-color: #ff3945;
+    color: #fff;
+    margin-right: 30px;
+    padding: 5px 10px;
+}
+
+.danhgia p:hover{
+    color: #fff;
+}
+
+.danhgia:hover{
+    opacity: .9;
+}
+
+.mualai{
+    border: 1px solid rgb(0 0 0 / 15%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+/*CHI TIẾT SẢN PHẨM*/
+
+#container_chitietsp{
+    height: 1500px;
+    margin: 120px 150px 0;
+}
+
+.anhchitiet_sp img{
+    width: 30.313rem;
+    height: 30.313rem;
+}
+
+.container_ctsp{
+    display: flex;
+}
+
+.box_uudai{
+    border: 2px solid #f2f2f2;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: 3px 3px 3px #ccc;
+}
+
+.uudai_content{
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 5px 0 5px 0;
+}
+
+.box_uudai p{
+    padding-left: 20px;
+}
+
+.btn_buy{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.btn_buy p{
+    padding: 0.313rem 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.them_sp{
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+    background-color: rgb(237, 29, 43);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    width: 50%;
+    height: 20%;
+}
+
+.add_sp{
+    margin: 0 -0.313rem;
+}
+
+.mua_ngay{
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+    padding: 0 10px;
+    background-color: rgb(237, 29, 43);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    width: 50%;
+    height: 20%;
+}
+
+.them_sp:hover{
+    opacity: 0.9;
+}
+
+.mua_ngay:hover{
+    opacity: 0.9;
+}
+
+.call_now{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 -12px 0;
+}
+
+.call_now_or{
+    justify-content: center;
+}
+
+.call_now_or{
+    display: flex;
+}
+
+.call_now_or img{
+    width: 40px;
+    padding: 0 5px;
+}
+
+.call_now span{
+    font-size: 20px;
+}
+
+.container_ttchitiet{
+    border: 2px solid #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #ccc;
+}
+
+.header_ttchitiet h5{
+    margin-bottom: 0;
+    padding: 12px 25px;
+    font-weight: 600;
+}
+
+.container_ttchitiet hr{
+    margin: 0 15px;
+}
+
+.box_ttchitiet{
+    padding: 0 30px;
+}
+
+.box_ttchitiet p{
+    padding: 15px 15px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.row_tt{
+    background-color: #f2f2f2;
+}
