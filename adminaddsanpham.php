@@ -10,7 +10,7 @@ if (isset($_POST['nutthemsp'])) {
     if (isset($_FILES['hinh_anh']['name'])) {
         $anhsp = $_FILES['hinh_anh']['name'];
     }
-    $mysqli = new mysqli('localhost', 'root', '', 'bandongho');
+    $mysqli = new mysqli('db', 'root', 'rootpassword', 'bandongho');
 
     // Thực hiện câu lệnh SQL
     $sql = "INSERT INTO products (name, description, image_url, price, quantity, category_id) VALUES (?, ?, ?, ?, ?, ?)";
