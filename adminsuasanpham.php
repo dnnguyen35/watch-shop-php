@@ -21,7 +21,11 @@ if(isset($_POST['nutsuasp'])){
     if(isset($_FILES['hinh_anh']['name']) && !empty($_FILES['hinh_anh']['name'])) {
         $hinh_anh = $_FILES['hinh_anh']['name'];
         $tmp_name = $_FILES['hinh_anh']['tmp_name'];
-        move_uploaded_file($tmp_name, "./img/".$hinh_anh);
+	if( move_uploaded_file($tmp_name, "img/".$hinh_anh)) {
+		echo "<script>console.log('Upload failed')";
+	}else {
+		echo "Error:" . error_get_last()['message'];
+	}
     } else {
         $hinh_anh = $rowsp['image_url'];
     }

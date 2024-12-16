@@ -1,6 +1,12 @@
 <?php
 // session_start();
 include('./config.php');
+if(isset($_SESSION['id_user'])){
+    $iduser = $_SESSION['id_user'];
+    $sqluser = "SELECT * FROM users WHERE id='$iduser'";
+    $queryuser = mysqli_query($conn,$sqluser);
+    $rowuser = mysqli_fetch_assoc($queryuser);
+}
 ?>
 
 <!DOCTYPE html>
@@ -91,8 +97,8 @@ include('./config.php');
 
                 <div id="inputthanhtoan">
                     <input class="right" type="text" id="fullName" name="tenkhachhang" required></br>
-                    <input class="right" type="email" id="email" name="diachiemail" required></br>
-                    <input class="right" type="tel" id="phone" name="sodienthoai" required></br>
+                    <input class="right" type="email" id="email" name="diachiemail" value="<?php echo $rowuser['email']; ?>" readonly required></br>
+                    <input class="right" type="tel" id="phone" name="sodienthoai" required pattern="\d*" title="Vui lòng chỉ nhập số"></br>
                     <input class="right" type="radio" id="payment-method-cash" name="pay_method" value="cash_on_delivery" checked>
                     <label for="payment-method-cash">Tiền mặt (Thanh toán khi nhận hàng)</label>
                     </br>

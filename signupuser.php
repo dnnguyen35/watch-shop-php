@@ -22,6 +22,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['btndangky'])) {
     }else{
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $error['invalidemail'] = 'Vui lòng nhập đúng email' ;
+        }else {
+            // Kiểm tra email đã tồn tại trong cơ sở dữ liệu hay chưa
+            $sql = "SELECT * FROM users WHERE email = '$email'";
+            $result = mysqli_query($conn, $sql);
+            if (mysqli_num_rows($result) > 0) {
+                $error['trungemail'] = 'Email đã tồn tại';
+            }
         }
     }
     if (empty($rpass)) {
@@ -103,6 +110,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['btndangky'])) {
                             echo '<small>' . $error['rongemail'] . '</small>';
                         } else if (isset($error['invalidemail'])) {
                             echo '<small>' . $error['invalidemail'] . '</small>';
+                        }else if (isset($error['trungemail'])) {
+                            echo '<small>' . $error['trungemail'] . '</small>';
                         }
                         ?>
                     </div>

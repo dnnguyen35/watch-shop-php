@@ -67,7 +67,7 @@ if (isset($_GET["layout"])) {
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div class="container">
             <a href="./index.php?layout=trangchu" class="navbar-brand d-flex justify-content-between ">
-                <h6 style="color: red;">WatchShop</h6>
+                <h6 style="color: red;">WatchShopCali</h6>
             </a>
             <div class="order-lg-2">
                 <form method="POST" action="./index.php?layout=tatcasp" class="btn position-relative" id="search-box">
@@ -152,7 +152,7 @@ if (isset($_GET["layout"])) {
     <!-- End contact -->
 
     <!-- Start footer -->
-    <footer class="bg-dark py-5">
+    <footer class="bg-dark py-5" style="margin-top: 19rem!important ">
         <div class="container">
             <div class="row text-white g-4">
                 <div class="col-md-6 col-lg-4">

@@ -136,24 +136,19 @@ if ($iddm != 0 && $iddm != "" && !isset($_POST['nuttimkiemnangcao'])) {
                 </ul>
             </div>
             <div class="col-lg-10 category-right">
-                <div class="home-filter mt-4">
-                    <form action="./index.php?layout=tatcasp<?php if (isset($_GET["id_dm"])) echo '&id_dm=' . $_GET["id_dm"]; ?>" method="POST" class="range-slider-container">
-
-    <div data-role="rangeslider">
-
-        <label for="price-min">Minimum Price:</label>
-
-        <input type="range" name="price-min" id="price-min" value="200" min="0" max="1000">
-
-        <label for="price-max">Maximum Price:</label>
-
-        <input type="range" name="price-max" id="price-max" value="800" min="0" max="1000">
-
-      </div>		
-	<button name="nuttimkiemnangcao" style="border-radius: 7px!important; border: solid #0d6efd 3px !important; padding:0 2px">Tìm kiếm</button>
+		<div class="home-filter mt-4">
+                    <form action="./index.php?layout=tatcasp<?php if (isset($_GET["id_dm"])) echo '&id_dm=' . $_GET["id_dm"]; ?>" method="POST">
+                        <select name="locgiatien" id="" class="input-select border_select">
+                            <option value="thapdencao" selected>Thấp đến cao</option>
+                            <option value="caodenthap">Cao đến thấp</option>
+                            <!-- <option value="500-1000">500.000-1.000.000</option>
+                            <option value="1000-1500">1.000.000-1.500.000</option>
+                            <option value="1500-...">1.500.000-10.000.000</option> -->
+                        </select>
+                        <button name="nuttimkiemnangcao" style="border-radius: 7px!important; border: solid #0d6efd 3px !important; padding:0 2px">Tìm kiếm</button>
                     </form>
                 </div>
-                <div class="row">
+		<div class="row">
                     <div class="cont">
                         <div class="container-fluid row">
                             <?php

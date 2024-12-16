@@ -6,11 +6,14 @@ if (isset($_POST['nutthemsp'])) {
     $soluongsp = $_POST['soluong'];
     $danhmucsp = $_POST['danh_muc'];
     $noidungsp = $_POST['noi_dung'];
-    $anhsp;
-    if (isset($_FILES['hinh_anh']['name'])) {
+    $anhsp = '';
+    // Kiểm tra và xử lý upload file ảnh
+    if (isset($_FILES['hinh_anh']['name']) && !empty($_FILES['hinh_anh']['name'])) {
         $anhsp = $_FILES['hinh_anh']['name'];
+        $tmp_name = $_FILES['hinh_anh']['tmp_name'];
+        move_uploaded_file($tmp_name, "./img/" . $anhsp); // Di chuyển file vào thư mục img
     }
-    $mysqli = new mysqli('localhost', 'root', '', 'bandongho');
+    $mysqli = new mysqli('db', 'root', 'rootpassword', 'bandongho');
 
     // Thực hiện câu lệnh SQL
     $sql = "INSERT INTO products (name, description, image_url, price, quantity, category_id) VALUES (?, ?, ?, ?, ?, ?)";

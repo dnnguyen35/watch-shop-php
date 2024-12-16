@@ -37,7 +37,7 @@ if(isset($_SESSION['id_user'])){
                 
                 <div id="inputthanhtoan">
                     <input class="right" type="text"  name="tentaikhoan" value="<?php echo $rowuser['username']; ?>"  readonly></br>
-                    <input class="right" type="email"  name="emailtaikhoan" value="<?php echo $rowuser['email']; ?>" required></br>
+		    <input readonly class="right" type="email"  name="emailtaikhoan" value="<?php echo $rowuser['email']; ?>" required></br>
                     <input class="right" type="text"  name="matkhau" value="<?php echo $rowuser['password']; ?>" required></br>
                     <P class="right">Vui lòng thay đổi ở dòng email</br> hoặc mật khẩu hoặc cả hai sau</br>đó nhấn để thay đổi</P>                           
                     <button class="checkout-button right" type="submit" name="nutcapnhatuser">Thay đổi</button>

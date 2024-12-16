@@ -3,7 +3,7 @@ include('./config.php');
 
 if (isset($_POST['nutthemadmin'])) {
     $tenadmin = mysqli_real_escape_string($conn, $_POST['tenadmin']);
-    $matkhauadmin = $_POST['tenadmin'];
+    $matkhauadmin = $_POST['matkhauadmin'];
     $emailadmin = $_POST['emailadmin'];
     $error = [];
 
@@ -16,6 +16,12 @@ if (isset($_POST['nutthemadmin'])) {
     if (mysqli_num_rows($result) > 0) {
         $error['trungtenadmin'] = 'Tên đã được sử dụng';
     }
+    if (!filter_var($emailadmin, FILTER_VALIDATE_EMAIL)) {
+	$error['emailinvalidformat'] = 'Vui lòng nhập đúng định dạng.';
+    } elseif (!str_ends_with($emailadmin, '@gmail.com')) {
+    	$error['notgmailformat'] = 'Email phải có định dạng @gmail.com';
+    }   
+
     while ($row1 = mysqli_fetch_assoc($result1)) {
         if ($row1['email'] == $emailadmin) {
             $error['trungemailadmin'] = 'Email đã được sử dụng';
@@ -75,9 +81,15 @@ if (isset($_POST['nutthemadmin'])) {
                                             echo $error['trungtenadmin'];
                                         } ?></p>
                                     </br></br></br></br></br></br>
-                                    <p><?php if (isset($error['trungemailadmin'])) {
-                                            echo $error['trungemailadmin'];
-                                        } ?></p>
+				    <p><?php 
+					if (isset($error['emailinvalidformat'])) {
+						echo $error['emailinvalidformat'];
+					}
+				        else if (isset($error['notgmailformat'])) {
+                                              echo $error['notgmailformat'];
+					}else if(isset($error['trungemailadmin'])){
+					       echo $error['trungemailadmin'];
+					} ?></p>
                                 </div>
                             </div>
                         </div>

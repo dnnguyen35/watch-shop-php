@@ -1,7 +1,8 @@
 <?php
 session_start();
 if(!isset($_SESSION['adminname'])){
-    header('location: ./loginadmin.php');
+	header('location: ./loginadmin.php');
+	exit();
 }else{
 $tmplayoutadmin ="";
 if (isset($_GET["adminlayout"])) {
@@ -71,6 +72,10 @@ if (isset($_GET["adminlayout"])) {
 <body>
 
     <div class="top">
+		<div class="sign_out">
+	            <a href="./logoutadmin.php"><i class="fas fa-right-from-bracket"></i></a>
+	        </div>
+
                 <div class="sidebar">
                     <div class="user">
                         <div class="user_avatar">
@@ -107,9 +112,7 @@ if (isset($_GET["adminlayout"])) {
                 </div>
             </div>
 	</div>
-	<div class="sign_out">
-            <a href="./logoutadmin.php"><i class="fas fa-right-from-bracket"></i></a>
-        </div>
+	
     </div>
     <?php
     }

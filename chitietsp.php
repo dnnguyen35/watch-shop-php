@@ -1,5 +1,4 @@
 <?php
-session_start();
 include('./config.php');
 $idsp = "";
 if (isset($_GET['id_sp'])) {

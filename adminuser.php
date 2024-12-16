@@ -105,9 +105,15 @@ document.addEventListener("DOMContentLoaded", function() {
                             <?php
                             while ($row = mysqli_fetch_assoc($queryphantrang)) {
                                 if($row['status']==1){
-                                    $khoa = 'Đã khóa';
+					$khoa = 'Đã khóa';
+					$btnBlock = 'btn-primary';
+					$textColor = 'text-danger';
+					$textStatus = '<span>Mởo</span>';
                                 }else{
-                                    $khoa = 'Đang mở';
+					$khoa = 'Đang mở';
+					$btnBlock = 'btn-danger';
+					$textColor = 'text-primary';
+					$textStatus = '<span>Khóa</span>';
                                 }
 
                                 if($row['is_admin']==1){
@@ -120,8 +126,8 @@ document.addEventListener("DOMContentLoaded", function() {
                        <td>' . $row['username'] . '</td>
                        <td>' . $row['password'] . '</td>
                        <td>' . $row['email'] . '</td>
-                       <td>' . $khoa . '</td>
-                       <td><a href="./adminkhoauser.php?page='.$page.'&id_user=' . $row['id'] . '" class="addnew_btn">Khóa/Mở</a></td>
+                       <td class="' . $textColor . '"><strong> ' . $khoa . ' </strong></td>
+                       <td><a href="./adminkhoauser.php?page='.$page.'&id_user=' . $row['id'] . '" class="addnew_btn ' . $btnBlock . '">'.$textStatus.'</a></td>
                    </tr>';
                             }
 
