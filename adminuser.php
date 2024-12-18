@@ -6,12 +6,24 @@ if (isset($_GET['page'])) {
 } else {
     $page = 1;
 }
+if (isset($_GET['role'])) {
+	$role = $_GET['role'];
+} else {
+    $role = 0;
+}
+if ($role == 0){
+	$nextRole = 1;
+	$nextRoleTitle = 'Quản lí quản trị viên';
+}else {
+	$nextRole = 0;
+	$nextRoleTitle = 'Quản lí khách hàng';
+     }
 $rowperpage = 5;
 $perRow = $page * $rowperpage - $rowperpage;
 $sqlphantrang = "SELECT * FROM users ORDER BY is_admin ASC LIMIT $perRow,$rowperpage";
 $queryphantrang = mysqli_query($conn, $sqlphantrang);
 
-$totalRow = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM users"));
+$totalRow = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM users WHERE is_admin=$role"));
 $totalPage = ceil($totalRow / $rowperpage);
 
 $listPage = "";
@@ -19,7 +31,7 @@ for ($i = 1; $i <= $totalPage; $i++) {
     if ($page == $i) {
         $listPage .= '<a href="#" class="phan_trang active" style="background-color: #0077FF">' . $i . '</a>';
     } else {
-        $listPage .= '<a href="./admin.php?adminlayout=adminnguoidung&page=' . $i . '" class="phan_trang">' . $i . '</a>';
+        $listPage .= '<a href="./admin.php?adminlayout=adminnguoidung&page=' . $i . '&role=' .$role. '" class="phan_trang">' . $i . '</a>';
     }
 }
 
@@ -135,8 +147,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
                         </tbody>
-                        <div>
-                            <button type="submit" name="trang_thai" class="btn btn-outline-success" style="width:100px;">Cập nhật</button>
+			<div>
+			<a href="./admin.php?adminlayout=adminnguoidung&role=<?php echo $nextRole; ?>" class="btn btn-outline-success" style="width:100px;"><?php echo $nextRoleTitle; ?></a>
+
                         </div>
                     </form>
                 </table>

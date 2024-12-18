@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 <th scope="col">Tên danh mục</th>
                                 <th scope="col">Trạng thái</th>
                                 <th scope="col">Sửa</th>
-                                <th scope="col">Ẩn</th>
+                                <th scope="col">Ẩn/Hiển</th>
 
                             </tr>
                         </thead>
@@ -103,15 +103,17 @@ document.addEventListener("DOMContentLoaded", function() {
                             <?php
                             while ($row = mysqli_fetch_assoc($queryphantrang)) {
                                 if($row['status']==1){
-                                    $an = 'Đang hiện';
+					$an = 'Đang hiện';
+					$textAnHien = 'Ẩn đi';
                                 }else{
-                                    $an = 'Đã ẩn';
+					$an = 'Đã ẩn';
+					$textAnHien = 'Hiển thị';
                                 }
                                 echo '<tr>
                        <td>' . strtoupper($row['name']) . '</td>
                        <td>' . $an . '</td>
                        <td><a href="./admin.php?adminlayout=suadanhmuc&page='.$page.'&id_dm='.$row['id'].'" class="addnew_btn">Sửa</a></td>
-                       <td><a href="./adminandanhmuc.php?page='.$page.'&id_dm='.$row['id'].'" class="addnew_btn">Ẩn</a></td>                                           
+                       <td><a href="./adminandanhmuc.php?page='.$page.'&id_dm='.$row['id'].'" class="addnew_btn">' .$textAnHien. '</a></td>                                           
                        </tr>';
                             }
 
